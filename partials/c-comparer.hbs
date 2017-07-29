@@ -1,0 +1,70 @@
+---
+type: component
+contextData: "comparer-bp"
+layout: "lyt-docs"
+publish: true
+jsFiles:
+- comparer.js
+scssFiles:
+- _c-comparer.scss
+---
+
+<div class="c-comparer{{#if options.settings.comparerContextClass}}--{{options.settings.comparerContextClass}}{{else}}--default{{/if}}{{#if settings.classes}} {{settings.classes}}{{/if}}"
+     data-js-module="comparer"
+	{{#if settings.jsOptions}}
+	 data-js-options="{{stringify settings.jsOptions}}"
+	{{/if}}
+	 data-css="c-comparer"
+>
+	{{#with content}}
+		<!-- Top Layer -->
+		{{#with contentTop}}
+			<div class="comparer__top-wrapper{{#if backgroundColorClass}} {{backgroundColorClass}}{{/if}}{{#if
+					../../settings.jsOptions.isContentRight}} is-right{{else}} is-left{{/if}}">
+
+				<div class="comparer__top-container" data-js-item="comparer-top-container">
+
+					<!-- Handle Bar -->
+					<div class="comparer__handle-bar" data-js-item="comparer-handle"></div>
+
+					<!-- Handle -->
+					<div class="comparer__handle" data-js-item="comparer-handle">
+						<img src="{{../handleIcon}}">
+					</div>
+
+					<!-- Top Content -->
+					<div class="comparer__top">
+						<div class="comparer__top-content" data-js-item="comparer-top-content">
+
+							{{#if picture}}
+								<div class="comparer__picture">
+									<img src="{{picture}}" alt="Image"/>
+								</div>
+							{{/if}}
+
+						</div>
+					</div>
+				</div>
+			</div>
+		{{/with}}
+
+		<!-- Bottom Layer -->
+		{{#with contentBottom}}
+			<div class="comparer__bottom-wrapper{{#if backgroundColorClass}} {{backgroundColorClass}}{{/if}}{{#if
+					../../settings.jsOptions.isContentRight}} is-left{{else}} is-right{{/if}}">
+				<!-- Bottom Content -->
+				<div class="comparer__bottom">
+
+					{{#if picture}}
+						<div class="comparer__picture">
+							<img src="{{picture}}" alt="Image"/>
+						</div>
+					{{/if}}
+
+				</div>
+			</div>
+		{{/with}}
+
+	{{/with}}
+
+</div>

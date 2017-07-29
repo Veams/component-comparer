@@ -1,0 +1,91 @@
+/* ===================================================
+Block: comparer
+=================================================== */
+$comparer-color-light: #fff;
+
+[data-css="c-comparer"] {
+	/*
+	Global Styles
+	----------------------- */
+	position: relative;
+	overflow: hidden;
+
+	/*
+	Modifiers
+	----------------------- */
+	.is-right {
+		.comparer__top-container {
+			left: auto;
+			right: 0;
+			border-right: none;
+			border-left: 1px solid $comparer-color-light;
+		}
+
+		.comparer__top-content {
+			left: auto;
+			right: 0;
+		}
+
+		.comparer__handle {
+			left: 0;
+			right: auto;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	/*
+	Top Container
+	----------------------- */
+	.comparer__top-container {
+		background-color: inherit;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		min-width: 2%;
+		max-width: 98%;
+		z-index: 1;
+		border-right: 1px solid $comparer-color-light;
+	}
+
+	.comparer__top {
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+	}
+
+	.comparer__top-content {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.comparer__handle-bar {
+		height: 100%;
+		width: 30px;
+		position: absolute;
+		right: -15px;
+		z-index: 1;
+		cursor: col-resize;
+	}
+
+	.comparer__handle {
+		cursor: col-resize;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 87px;
+		height: 87px;
+		transform: translate(50%, -50%);
+		z-index: 2;
+		background-color: rgba(255, 255, 255, .5);
+		padding: 8px;
+		border-radius: 50%;
+	}
+}
+
+/* ---------------------------------------------------
+Context: Default
+--------------------------------------------------- */
+.c-comparer--default {}
