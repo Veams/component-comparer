@@ -36,9 +36,9 @@ It allows you to change via drag the image.
 ### `c-comparer.hbs`
 
 #### Settings
-- settings.accContextClass {`String`} [default] - _Context class of component._
-- settings.accClasses {`String`} - _Modifier classes for component._
-- settings.accJsOptions {`Object`} - _JavaScript options which gets stringified._
+- settings.comparerContextClass {`String`} [default] - _Context class of component._
+- settings.comparerClasses {`String`} - _Modifier classes for component._
+- settings.jsOptions {`Object`} - _JavaScript options which gets stringified._
 
 -------------
 
@@ -52,19 +52,11 @@ The module gives you the possibility to override default options:
 - draggClass {`String`} ['is-dragging'] - _Define the dragging class._
 - dragMode {`Boolean`} [true] - _Enable or disable drag mode._
 - topContentRight {`Boolean`} [false] - _Reverse the drag mode direction._
-- disabled {`Object`} [ {'desktop': false, 'tablet-l': false, 'tablet-p': false, 'mobile-l': false, 'mobile-p': false, 'mobile-s': false} ] - _Define on which viewport the module is enabled._
-
+- disabled {`Object`} [ 'desktop': false, 'tablet-large': false, 'tablet-small': false, 'mobile-large': false, 'mobile-medium': false, 'mobile-small': false ] - _Define on which viewport the module is enabled._
 
 ------------
 
 ## Sass Options
 
 There are multiple global variables which you can change: 
-- $accordion-toggle-duration [`300ms !default`] - _Speed of toggling._
-- $accordion-transition-method [`ease !default`] - _Transition method of toggle effect._
-- $accordion-icon-color [`#666 !default`] - _+ icon color._
-- $accordion-icon-width [`30px !default`] - _+ icon width._
-- $accordion-icon-height [`2px !default`] - _+ icon height._
-- $accordion-btn-color `[$accordion-icon-color !default`] - _Accordion button color._
-- $accordion-btn-bg-color [`rgba(255, 255, 255, 0.5) !default`] - _Background color of the accordion button._
-- $accordion-padding [`1rem !default`] - _Default padding which will be used in the accordion._
+- $comparer-color-light [`#fff`] - _Handle color._
