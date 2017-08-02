@@ -2,7 +2,7 @@
  * Description of ContentComparer.
  *
  * @module ContentComparer
- * @version v3.0.0
+ * @version v4.0.0
  *
  * @author koen.zigterman
  */
@@ -52,7 +52,7 @@ class Comparer extends VeamsComponent {
 	 */
 	static get info() {
 		return {
-			version: '3.0.0'
+			version: '4.0.0'
 		};
 	}
 

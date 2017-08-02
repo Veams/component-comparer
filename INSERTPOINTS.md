@@ -12,12 +12,8 @@
 ### Include: SCSS
 
 ``` scss
-// @INSERT :: START @tag: scss-import //
-@import "components/_c-comparer";
-// @INSERT :: END //
-
 // @INSERT :: START @tag: scss-self-contained-import //
-@import "../templating/partials/components/comparer/scss/_c-comparer";
+@import "../components/comparer/scss/_c-comparer";
 // @INSERT :: END //
 ```
 
@@ -25,12 +21,8 @@
 
 #### Import
 ``` js
-// @INSERT :: START @tag: js-import //
-import Comparer from './modules/comparer/comparer';
-// @INSERT :: END //
-
 / @INSERT :: START @tag: js-self-contained-import //
-import Comparer from '../templating/partials/components/comparer/js/comparer';
+import Comparer from '../components/comparer/js/comparer';
 // @INSERT :: END //
 ```
 
