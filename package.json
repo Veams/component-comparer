@@ -1,0 +1,18 @@
+{
+	"name": "veams-component-comparer",
+	"version": "4.0.0",
+	"description": "The component represents a comparison handler. It allows you to change via drag the image.",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/Veams/veams-component-comparer.git"
+	},
+	"keywords": [
+		"veams"
+	],
+	"author": "Sebastian Fitzner",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Veams/veams-component-comparer/issues"
+	},
+	"homepage": "https://github.com/Veams/veams-component-comparer#readme"
+}
