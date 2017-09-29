@@ -1,3 +1,4 @@
+## Usage
 
 ### Include: Page
 
@@ -9,22 +10,7 @@
 {{! @INSERT :: END }}
 ```
 
-### Include: SCSS
-
-``` scss
-// @INSERT :: START @tag: scss-self-contained-import //
-@import "../components/comparer/scss/_c-comparer";
-// @INSERT :: END //
-```
-
 ### Include: JavaScript
-
-#### Import
-``` js
-/ @INSERT :: START @tag: js-self-contained-import //
-import Comparer from '../components/comparer/js/comparer';
-// @INSERT :: END //
-```
 
 #### Initializing in Veams V5
 ``` js

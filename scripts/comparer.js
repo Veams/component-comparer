@@ -1,8 +1,8 @@
 /**
- * Description of ContentComparer.
+ * Description of Comparer.
  *
- * @module ContentComparer
- * @version v4.0.0
+ * @module Comparer
+ * @version v5.0.0
  *
  * @author koen.zigterman
  */
@@ -52,7 +52,10 @@ class Comparer extends VeamsComponent {
 	 */
 	static get info() {
 		return {
-			version: '4.0.0'
+			name: 'Comparer',
+			version: '5.0.0',
+			vc: true,
+			mod: false // set to true if source was modified in project
 		};
 	}
 
