@@ -4,7 +4,7 @@
 	"contextData": "comparer-bp",
 	"layout": "lyt-docs",
 	"scssFiles": [
-		"c-comparer.scss"
+		"_c-comparer.scss"
 	],
 	"jsFiles": [
 		"comparer.js"

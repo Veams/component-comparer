@@ -2,7 +2,7 @@
  * Description of Comparer.
  *
  * @module Comparer
- * @version v5.0.1
+ * @version v5.0.2
  *
  * @author koen.zigterman
  */
@@ -52,7 +52,7 @@ class Comparer extends VeamsComponent {
 	 */
 	static get info() {
 		return {
-			version: '5.0.1',
+			version: '5.0.2',
 			vc: true,
 			mod: false // set to true if source was modified in project
 		};

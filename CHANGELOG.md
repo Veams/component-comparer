@@ -1,3 +1,6 @@
+### v5.0.2
+- Fix scss file reference in settings 
+
 ### v5.0.1
 - Remove unused prop
 
