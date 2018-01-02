@@ -29,7 +29,7 @@ It allows you to change via drag the image.
 
 ## Fields
 
-### `c-comparer.hbs`
+### `comparer.hbs`
 
 #### Settings
 - settings.comparerContextClass {`String`} [default] - _Context class of component._
