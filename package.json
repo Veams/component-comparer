@@ -1,6 +1,6 @@
 {
 	"name": "veams-component-comparer",
-	"version": "5.0.2",
+	"version": "5.1.0",
 	"description": "The component represents a comparison handler. It allows you to change via drag the image.",
 	"repository": {
 		"type": "git",

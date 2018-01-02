@@ -1,12 +1,11 @@
 {
 	"type": "component",
-	"displayName": "c-comparer",
 	"contextData": "comparer-bp",
 	"layout": "lyt-docs",
 	"scssFiles": [
-		"_c-comparer.scss"
+		"styles/_comparer.scss"
 	],
 	"jsFiles": [
-		"comparer.js"
+		"scripts/comparer.js"
 	]
 }

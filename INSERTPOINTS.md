@@ -5,7 +5,7 @@
 ``` hbs
 {{! @INSERT :: START @id: comparer, @tag: component-partial }}
 {{#with comparer-bp.variations.default}}
-   {{> c-comparer}}
+   {{> comparer}}
 {{/with}}
 {{! @INSERT :: END }}
 ```
@@ -15,11 +15,7 @@
 #### Initializing in Veams V5
 ``` js
 // @INSERT :: START @tag: js-init-v5 //
- 	,
- 	// Init Comparer
- 	{
- 		namespace: 'comparer',
- 		module: Comparer
- 	}
+	// Init Comparer
+	Veams.modules.add({ namespace: 'comparer', module: Comparer });
 // @INSERT :: END //
 ```
