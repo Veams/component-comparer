@@ -9,12 +9,14 @@
 				"jsOptions": {
 					"isContentRight": false,
 					"disabled": {
-						"desktop": false,
-						"tablet-large": false,
-						"tablet-small": false,
-						"mobile-large": false,
-						"mobile-medium": false,
-						"mobile-small": false
+						'mobile-s': false,
+                        'mobile-m': false,
+                        'mobile-l': false,
+                        'tablet-s': false,
+                        'tablet-l': false,
+                        'desktop-s': false,
+                        'desktop-m': false,
+                        'desktop-l': false
 					}
 				}
 			},

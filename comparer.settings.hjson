@@ -1,0 +1,12 @@
+{
+	"type": "component",
+	"contextData": "comparer",
+	"displayName": "comparer",
+	"layout": "lyt-docs",
+	"scssFiles": [
+		"_comparer.scss"
+	],
+	"jsFiles": [
+		"comparer.js"
+	]
+}

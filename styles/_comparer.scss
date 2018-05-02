@@ -1,7 +1,7 @@
 /* ===================================================
 Block: comparer
 =================================================== */
-$comparer-color-light: #fff;
+$comparer-color-light: #fff !default;
 
 [data-css="c-comparer"] {
 	/*
@@ -9,10 +9,16 @@ $comparer-color-light: #fff;
 	----------------------- */
 	position: relative;
 	overflow: hidden;
+	transition: all 300ms ease-in-out 100ms;
+	opacity: 1;
 
 	/*
 	Modifiers
 	----------------------- */
+	&.is-loading {
+		opacity: 0;
+	}
+
 	.is-right {
 		.comparer__top-container {
 			left: auto;

@@ -2,17 +2,25 @@
  * Description of Comparer.
  *
  * @module Comparer
- * @version v5.1.1
+ * @version v1.0.0
  *
  * @author koen.zigterman
+ * @refactoring George Bullock
  */
 
-import { Veams } from 'app.veams';
-import VeamsComponent from 'veams/lib/common/component';
+import $ from '@veams/query';
+import Component from '@veams/component';
 
-const $ = Veams.$;
+class Comparer extends Component {
 
-class Comparer extends VeamsComponent {
+	/*
+	* General Properties
+	*/
+	$el = $(this.el);
+	$topContainer = $(this.options.topContainer, this.$el);
+	$topContent = $(this.options.topContent, this.$el);
+	$handle = $(this.options.handle, this.$el);
+
 	/**
 	 * Constructor for our class
 	 *
@@ -31,12 +39,17 @@ class Comparer extends VeamsComponent {
 			dragMode: true,
 			topContentRight: false,
 			disabled: {
-				'desktop': false,
-				'tablet-large': false,
-				'tablet-small': false,
-				'mobile-large': false,
-				'mobile-medium': false,
-				'mobile-small': false
+				'mobile-s': false,
+				'mobile-m': false,
+				'mobile-l': false,
+				'tablet-s': false,
+				'tablet-l': false,
+				'desktop-s': false,
+				'desktop-m': false,
+				'desktop-l': false
+			},
+			classes: {
+				isLoading: 'is-loading'
 			}
 		};
 
@@ -52,7 +65,7 @@ class Comparer extends VeamsComponent {
 	 */
 	static get info() {
 		return {
-			version: '5.1.1',
+			version: '1.0.0',
 			vc: true,
 			mod: false // set to true if source was modified in project
 		};
@@ -67,8 +80,8 @@ class Comparer extends VeamsComponent {
 	 */
 	get subscribe() {
 		return {
-			'{{Veams.EVENTS.resize}}': 'preRender',
-			'{{Veams.EVENTS.mediachange}}': 'render'
+			'{{this.context.EVENTS.resize}}': 'preRender',
+			'{{this.context.EVENTS.mediachange}}': 'render'
 		};
 	}
 
@@ -90,38 +103,27 @@ class Comparer extends VeamsComponent {
 	 * ================================================= */
 
 	/**
-	 * Initialize the view and merge options
-	 *
-	 */
-	initialize() {
-		this.$topContainer = $(this.options.topContainer, this.$el);
-		this.$topContent = $(this.options.topContent, this.$el);
-		this.$handle = $(this.options.handle, this.$el);
-	}
-
-
-	/**
 	 * Pre-Render method
 	 */
-	preRender(){
+	preRender() {
 		// Return if module is disabled
-		if(this.disabled) return;
-
+		if (this.disabled) return;
 		this.elWidth = this.el.clientWidth;
-		this.$topContent.css('width', this.elWidth);
+		this.$topContent.css('width', `${this.elWidth}px`);
 	}
 
 	/**
 	 * Render method
 	 */
 	render() {
-		if(this.options.disabled[Veams.currentMedia] && !this.disabled){
+		if (this.options.disabled[ this.context.currentMedia ] && !this.disabled) {
 			this.disabled = true;
 			this.resetStyles();
 		} else {
-			this.disabled = this.options.disabled[Veams.currentMedia];
+			this.disabled = this.options.disabled[ this.context.currentMedia ];
 		}
 
+		this.$el.removeClass((this.options.classes.isLoading));
 	}
 
 	/** =================================================
@@ -139,23 +141,24 @@ class Comparer extends VeamsComponent {
 		this.dragging = false;
 		this.$handle.addClass(this.options.draggClass);
 	}
+
 	/**
 	 * Resize top container
 	 */
 	resizeContainer(e) {
 		// Return if module is disabled or if it is not dragging when dragging mode is enabled
-		if(this.disabled || !this.dragging && this.options.dragMode ) return;
+		if (this.disabled || !this.dragging && this.options.dragMode) return;
 
 		let mousePos = this.getMousePos(e);
 		let contentWidth = this.options.topContentRight ? this.elWidth - mousePos : 0 + mousePos;
 
-		this.$topContainer.css('width', contentWidth);
+		this.$topContainer.css('width', `${contentWidth}px`);
 	}
 
 	/**
 	 * Reset styles
 	 */
-	resetStyles(){
+	resetStyles() {
 		this.$topContent.removeAttr('style');
 		this.$topContainer.removeAttr('style');
 	}
