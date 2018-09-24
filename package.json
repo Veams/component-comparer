@@ -2,6 +2,10 @@
 	"name": "@veams/component-comparer",
 	"version": "1.0.1",
 	"description": "The component represents a comparison handler. It allows you to change the image via drag.",
+	"dependencies": {
+		"@veams/query": "^2.2.24",
+		"@veams/component": "^1.2.3"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/Veams/component-comparer.git"

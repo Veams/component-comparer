@@ -7,6 +7,6 @@
 		"_comparer.scss"
 	],
 	"jsFiles": [
-		"comparer.js"
+		"comparer.ts"
 	]
 }
